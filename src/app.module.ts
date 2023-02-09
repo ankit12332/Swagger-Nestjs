@@ -1,11 +1,14 @@
+import { ProductsModule } from './products/products.module';
 import { Module } from '@nestjs/common';
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
+import { Product } from './products/product.entity';
 
 @Module({
   imports: [
+        ProductsModule, 
     TypeOrmModule.forRoot({
       type: 'postgres',
       host: 'postgress-instance.culd1172xzea.ap-south-1.rds.amazonaws.com',
@@ -13,7 +16,7 @@ import { AppService } from './app.service';
       username: 'ankitpanda',
       password: '9658523363',
       database: 'CARPRICEAPI',
-      entities: [],
+      entities: [Product],
       synchronize: true,
     }),
   ],
