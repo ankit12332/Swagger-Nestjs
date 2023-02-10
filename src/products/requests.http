@@ -23,6 +23,3 @@ Content-Type: application/json
     "description": "Lool1122new4",
     "price":"123"
 }   
-
-### Get all Barcode
-Get http://localhost:3000/products/get-product-by-barcode/:barcode
