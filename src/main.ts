@@ -9,7 +9,6 @@ async function bootstrap() {
     .setTitle('Swagger Documentation')
     .setDescription('Swagger successfully created by installing these things "npm install @nestjs/swagger"')
     .setVersion('1.0')
-    .addTag('cats')
     .build();
   const document = SwaggerModule.createDocument(app, config);
   SwaggerModule.setup('api', app, document);

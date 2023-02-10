@@ -94,5 +94,4 @@ export class ProductsService {
     }
     return await this.productRepository.remove(product);
   }
-
 }
